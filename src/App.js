@@ -2,17 +2,23 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { About } from './pages/About';
+import { Navbar } from './components/Navbar';
+import { Alert } from './components/Alert';
+
 
 import './App.scss';
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="container">
+    <Navbar /> 
+      <div className="container pt-4 pb-4">
+      <Alert />
        <Switch>
          <Route path = {"/"} exact component={Home} />
          <Route path = {'/about'} component={About} />
-        </Switch>
+       </Switch>
+
       </div>
     </BrowserRouter>
   );

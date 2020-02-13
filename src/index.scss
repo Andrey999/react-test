@@ -7,3 +7,13 @@ body {
 .container {
   background: seashell;
 }
+
+.notes__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  strong {
+    margin-right: 16px;
+  }
+}

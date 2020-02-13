@@ -1,9 +1,18 @@
-import React, { Fragment } from 'react';
+import React, { Fragment }  from 'react';
+import { Form } from '../components/Form';
+import { Notes } from '../components/Notes';
 
 export const Home = () => {
-  return( 
+  const notes = new Array(3)
+        .fill('note').map((_, index) => ({ id: index, title: `Note: ${index + 1}` }));
+  return(
     <Fragment>
-      <h1>Home page</h1>
+      <Form />
+      <hr />
+
+      <Notes 
+        notes={notes} 
+      />
     </Fragment>
   );
 }
